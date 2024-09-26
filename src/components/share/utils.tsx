@@ -1,5 +1,5 @@
 import Slider from "react-slick";
-import MovieCard from "./MovieCard";
+import MovieCard from "./sharedComponents/MovieCard";
 import { BaseMovie } from "./types";
 
 export const moviesMapper = (movies: any) => {
