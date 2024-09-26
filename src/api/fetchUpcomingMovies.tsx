@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { baseUrl } from "./components/share/constants";
+import { baseUrl } from "../components/share/constants";
 
-export const getMovies = (enpoint: string) => {
+export const fetchUpcomingMovies = () => {
   const [response, setResponse] = useState([]);
 
   const KEY = import.meta.env.VITE_REACT_APP_MOVIE_KEY;
@@ -10,7 +10,9 @@ export const getMovies = (enpoint: string) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${baseUrl}${enpoint}?api_key=${KEY}`);
+        const response = await axios.get(
+          `${baseUrl}${"upcoming"}?api_key=${KEY}`
+        );
         setResponse(response.data.results);
       } catch (error) {
         console.error("Error fetching data:", error);
