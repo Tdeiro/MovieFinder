@@ -1,8 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { baseUrl} from "../components/share/constants";
+import { baseUrl } from "../components/share/constants";
 
-export const fetchPopularMovies = () => {
+export const fetchNowPlayingMovies = () => {
   const [response, setResponse] = useState([]);
 
   const KEY = import.meta.env.VITE_REACT_APP_MOVIE_KEY;
@@ -10,7 +10,9 @@ export const fetchPopularMovies = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`${baseUrl}${"popular"}?api_key=${KEY}`);
+        const response = await axios.get(
+          `${baseUrl}${"now_playing"}?api_key=${KEY}`
+        );
         setResponse(response.data.results);
       } catch (error) {
         console.error("Error fetching data:", error);
