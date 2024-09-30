@@ -7,6 +7,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 
 const MovieCard = (props: BaseMovie) => {
+  console.log("test branch");
   return (
     <div style={{ display: "flex" }}>
       <Card style={{ backgroundColor: "grey" }}>
