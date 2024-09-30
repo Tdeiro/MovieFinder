@@ -7,7 +7,6 @@ import { InputBar } from "../components/share/sharedComponents/SearchBar";
 export const MainPage = () => {
   return (
     <>
-      <InputBar />
       <PopularMoviesUI />
       <UpcomingMoviesUI />
       <TopRatedMoviesUI />

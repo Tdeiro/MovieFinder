@@ -1,8 +1,10 @@
 import { Button, Input, Stack } from "@mui/material";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const InputBar = () => {
   const [search, setSearch] = useState("");
+  const navigate = useNavigate();
 
   const onSearch = (e: any) => {
     setSearch(e.target.value);
@@ -10,7 +12,7 @@ export const InputBar = () => {
 
   const handleSearch = (event: any) => {
     event.preventDefault();
-
+    navigate(`/movie/search/${search}`);
     console.log(search);
   };
 
