@@ -14,21 +14,20 @@ export const UpcomingMoviesUI = () => {
     <div>
       <h2>Upcoming</h2>
       <MovieSlider>
-        {movies
-          ? movies.map((movie: BaseMovie) => (
-              <React.Fragment key={movie.title}>
-                <Button onClick={() => navigate(`/movie/result/${movie.id}`)}>
-                  Go to: {movie.title}
-                </Button>
-                <MovieCard
-                  key={movie.id}
-                  title={movie.title}
-                  popularity={movie.popularity}
-                  backdrop_path={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
-                />
-              </React.Fragment>
-            ))
-          : []}
+        {movies.length != 0 ? (
+          movies.map((movie: BaseMovie) => (
+            <a onClick={() => navigate(`/movie/result/${movie.id}`)}>
+              <MovieCard
+                key={movie.id}
+                title={movie.title}
+                popularity={movie.popularity}
+                backdrop_path={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+              />
+            </a>
+          ))
+        ) : (
+          <>Loading</>
+        )}
       </MovieSlider>
     </div>
   );

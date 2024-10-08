@@ -4,27 +4,30 @@ import CardActions from "@mui/material/CardActions";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
+import { CardMedia } from "@mui/material";
 
 const MovieCard = (props: BaseMovie) => {
   return (
-    <div style={{ display: "flex" }}>
-      <Card style={{ backgroundColor: "grey" }}>
-        <div style={{ alignContent: "center" }}>
-          <CardContent key={props.id}>
-            <img style={{ maxWidth: "200px" }} src={props.backdrop_path} />
-            <Typography variant="h5" component="div">
-              {props.title}
-            </Typography>
-            <Typography sx={{ color: "text.secondary", mb: 1.5 }}>
-              <span>Rating:</span> {props.popularity}
-            </Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Add to watchlist</Button>
-          </CardActions>
-        </div>
-      </Card>
-    </div>
+    <Card sx={{ maxWidth: 345, margin: "10px", height: 400 }}>
+      <CardMedia
+        sx={{ height: 140 }}
+        image={props.backdrop_path}
+        title="green iguana"
+      />
+      <CardContent>
+        <Typography gutterBottom variant="h5" component="div">
+          {props.title}
+        </Typography>
+        <Typography variant="body2" sx={{ color: "text.secondary" }}>
+          Lizards are a widespread group of squamate reptiles, with over 6,000
+          species, ranging across all continents except Antarctica
+        </Typography>
+      </CardContent>
+      <CardActions>
+        <Button size="small">Share</Button>
+        <Button size="small">Learn More</Button>
+      </CardActions>
+    </Card>
   );
 };
 

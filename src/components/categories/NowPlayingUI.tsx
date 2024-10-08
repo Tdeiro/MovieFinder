@@ -16,17 +16,14 @@ export const NowPlayingMoviesUI = () => {
       <MovieSlider>
         {movies
           ? movies.map((movie: BaseMovie) => (
-              <React.Fragment key={movie.title}>
-                <Button onClick={() => navigate(`/movie/result/${movie.id}`)}>
-                  Go to: {movie.title}
-                </Button>
+              <a onClick={() => navigate(`/movie/result/${movie.id}`)}>
                 <MovieCard
                   key={movie.id}
                   title={movie.title}
                   popularity={movie.popularity}
                   backdrop_path={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
                 />
-              </React.Fragment>
+              </a>
             ))
           : []}
       </MovieSlider>
