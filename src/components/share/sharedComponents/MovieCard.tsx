@@ -10,7 +10,7 @@ const MovieCard = (props: BaseMovie) => {
   return (
     <Card sx={{ maxWidth: 345, margin: "10px", height: 400 }}>
       <CardMedia
-        sx={{ height: 140 }}
+        sx={{ height: 200 }}
         image={props.backdrop_path}
         title="green iguana"
       />
@@ -19,12 +19,11 @@ const MovieCard = (props: BaseMovie) => {
           {props.title}
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+         {props.overview}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Share</Button>
+        <Button size="small">Rating {props.vote_average}</Button>
         <Button size="small">Learn More</Button>
       </CardActions>
     </Card>

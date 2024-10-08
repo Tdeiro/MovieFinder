@@ -1,5 +1,3 @@
-import { Button } from "@mui/material";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import { fetchUpcomingMovies } from "../../api/fetchUpcomingMovies";
 import MovieCard from "../share/sharedComponents/MovieCard";
@@ -12,16 +10,16 @@ export const UpcomingMoviesUI = () => {
   const navigate = useNavigate();
   return (
     <div>
-      <h2>Upcoming</h2>
-      <MovieSlider>
+      <MovieSlider name={"Upcoming Movies"}>
         {movies.length != 0 ? (
           movies.map((movie: BaseMovie) => (
             <a onClick={() => navigate(`/movie/result/${movie.id}`)}>
               <MovieCard
                 key={movie.id}
                 title={movie.title}
-                popularity={movie.popularity}
+                vote_average={movie.vote_average}
                 backdrop_path={`https://image.tmdb.org/t/p/original${movie.backdrop_path}`}
+                overview={movie.overview}
               />
             </a>
           ))
