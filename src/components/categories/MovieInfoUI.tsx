@@ -1,5 +1,4 @@
 import { fetchMovieDetails } from "../../api/fetchMovieDetails";
-import { BaseMovie } from "../share/types";
 import { useParams } from "react-router-dom";
 
 export const MovieInfoUI = () => {
