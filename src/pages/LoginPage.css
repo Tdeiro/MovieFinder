@@ -1,0 +1,30 @@
+html{
+    display: flex;
+    justify-content: center;
+    
+}
+body {
+    width: 400px;
+
+}
+.image-container {
+    text-align: center;
+}
+.main-container{
+    margin-top: 00px;
+    border:1px solid black;
+    height: 300px;
+    border-radius: 12px;
+    position: relative;
+    padding: 14px 18px;
+    
+}
+
+.main-form{
+    text-align: center;
+}
+
+.create-account-button{
+    margin-top: 100px;
+    
+}
