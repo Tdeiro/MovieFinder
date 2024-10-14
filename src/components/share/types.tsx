@@ -4,5 +4,13 @@ export type BaseMovie = {
   backdrop_path?: string;
   id?: number | undefined;
   overview?: string;
+  movieId?: number;
+};
 
+export type MovieCardType = {
+  name?: string;
+  rating?: number;
+  image?: string;
+  movieId?: number | undefined;
+  description?: string;
 };
