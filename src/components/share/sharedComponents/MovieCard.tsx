@@ -6,6 +6,7 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import { CardMedia } from "@mui/material";
 import { useNavigate } from "react-router-dom";
+import "./MovieCard.css";
 
 const MovieCard = (props: MovieCardType) => {
   const navigate = useNavigate();
@@ -15,20 +16,21 @@ const MovieCard = (props: MovieCardType) => {
       <CardMedia
         sx={{ height: 200 }}
         image={props.image}
-        title="green iguana"
+        title={props.name}
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          <a onClick={() => navigate(`/movie/result/${props.movieId}`)}>
+          <a className='movie-title' onClick={() => navigate(`/movie/result/${props.movieId}`)}>
             {props.name}
           </a>
         </Typography>
         <Typography variant="body2" sx={{ color: "text.secondary" }}>
-          {props.description}
+          {props.description?.substring(0, 200)}...
+
         </Typography>
       </CardContent>
       <CardActions>
-        <Button size="small">Rating {props.rating}</Button>
+        <Button size="small" className="card-button">Rating {props.rating}</Button>
         {isAuth ? (
           <Button size="small">Add to watchlist</Button>
         ) : (

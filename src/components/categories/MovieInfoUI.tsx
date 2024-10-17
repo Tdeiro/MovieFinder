@@ -1,6 +1,8 @@
 import { fetchMovieDetails } from "../../api/fetchMovieDetails";
 import { useParams } from "react-router-dom";
 import { styled } from "@mui/material/styles";
+import { baseUrl } from "../share/constants";
+import {API_KEY} from "../share/constants";
 import Grid from "@mui/material/Grid2";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
@@ -9,8 +11,6 @@ import "./MovieInfoUI.css";
 export const MovieInfoUI = () => {
   const params = useParams();
   const movieInfo = fetchMovieDetails(params.id);
-
-  console.log(movieInfo);
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#fff",
@@ -41,7 +41,13 @@ export const MovieInfoUI = () => {
             </Item>
           </Grid>
           <Grid size={6}>
-            <Item>2</Item>
+            <Item>
+              <div className="movie-info-section-trailer">
+                <iframe width="420" height="315"
+                src={`${baseUrl}$917496/videos/`}>
+                </iframe>
+              </div>
+            </Item>
           </Grid>
           <Grid size={6}>
             <Item>3</Item>

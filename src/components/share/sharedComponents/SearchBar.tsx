@@ -1,6 +1,7 @@
 import { Button, Input, Stack } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchBar.css";
 
 export const InputBar = () => {
   const [search, setSearch] = useState("");
@@ -17,7 +18,7 @@ export const InputBar = () => {
   };
 
   return (
-    <Stack direction="row" spacing={2}>
+    <Stack className="search-bar" direction="row" spacing={2}>
       <Input onChange={onSearch} type="text" />
       <Button variant="contained" onClick={handleSearch}>
         Search

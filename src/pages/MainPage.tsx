@@ -3,6 +3,7 @@ import { PopularMoviesUI } from "../components/categories/PopularMoviesUI";
 import { TopRatedMoviesUI } from "../components/categories/TopRatedMoviesUI";
 import { UpcomingMoviesUI } from "../components/categories/UpcomingMoviesUI";
 import { InputBar } from "../components/share/sharedComponents/SearchBar";
+import "./MainPage.css";
 
 export const MainPage = () => {
   return (
