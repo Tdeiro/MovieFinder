@@ -1,7 +1,8 @@
 .search-bar {
   background: linear-gradient(to right, #6A0DAD, #FF1493);
   border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
   padding: 10px;
   border: none;
- 
+  color: antiquewhite;
 }

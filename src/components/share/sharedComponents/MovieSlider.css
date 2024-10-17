@@ -1,4 +1,16 @@
 .your-class::before {
-    color: black;
+    color: white;   
+}
+.category-main h2 {
+    background-color: #ffffff; /* White background */
+    padding: 20px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #1A1A2E, #16213E);
+    border-radius: 15px;
     
+    padding: 10px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    color: #EAEAEA;
+
 }

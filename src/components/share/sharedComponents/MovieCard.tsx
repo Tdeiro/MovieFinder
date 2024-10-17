@@ -36,7 +36,7 @@ const MovieCard = (props: MovieCardType) => {
           <Button size="small">Add to watchlist</Button>
         ) : (
           <Button size="small" disabled>
-            Add to watchlist
+            
           </Button>
         )}
       </CardActions>

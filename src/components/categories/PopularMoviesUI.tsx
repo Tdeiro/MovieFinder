@@ -3,12 +3,13 @@ import { BaseMovie } from "../share/types";
 import MovieCard from "../share/sharedComponents/MovieCard";
 import { MovieSlider } from "../share/sharedComponents/MovieSlider";
 
+
 export const PopularMoviesUI = () => {
   const movies = fetchPopularMovies();
 
   return (
-    <div>
-      <MovieSlider name={"Popular"}>
+    <div className="category-main-header">
+      <MovieSlider  name={"Popular"}>
         {movies.length != 0 ? (
           movies.map((movie: BaseMovie) => (
             <MovieCard

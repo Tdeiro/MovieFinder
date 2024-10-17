@@ -41,7 +41,7 @@ export const MovieSlider = (props: any) => {
     ],
   };
   return (
-    <div style={{ marginTop: "50px" }}>
+    <div className="category-main" style={{ marginTop: "50px" }}>
       <h2>{props.name}</h2>
       <div style={{ display: "inline-flex", width: "100%", justifyContent: "center" }}>
         <div style={{ maxWidth: "80%" }}>
@@ -60,7 +60,7 @@ function SampleNextArrow(props: any) {
       style={{
         ...style,
         display: "block",
-        backgroundColor: "white",
+        backgroundColor: "#1A1A2E",
       }}
       onClick={onClick}
     />
@@ -72,7 +72,7 @@ function SamplePrevArrow(props: any) {
   return (
     <div
       className={`your-class ${className}`}
-      style={{ ...style, display: "block", background: "white" }}
+      style={{ ...style, display: "block", backgroundColor: "#1A1A2E" }}
       onClick={onClick}
     />
   );

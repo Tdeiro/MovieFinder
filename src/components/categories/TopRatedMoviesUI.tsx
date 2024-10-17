@@ -4,12 +4,13 @@ import MovieCard from "../share/sharedComponents/MovieCard";
 import { MovieSlider } from "../share/sharedComponents/MovieSlider";
 import { BaseMovie } from "../share/types";
 
+
 export const TopRatedMoviesUI = () => {
   const movies = fetchTopRatedMovies();
 
   return (
-    <div>
-      <MovieSlider name={"Top Rated"}>
+    <div className="category-main-header">
+      <MovieSlider  name={"Top Rated"}>
         {movies.length != 0 ? (
           movies.map((movie: BaseMovie) => (
             <MovieCard

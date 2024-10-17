@@ -11,6 +11,7 @@ import "./MovieInfoUI.css";
 export const MovieInfoUI = () => {
   const params = useParams();
   const movieInfo = fetchMovieDetails(params.id);
+  const KEY = import.meta.env.VITE_REACT_APP_MOVIE_KEY;
 
   const Item = styled(Paper)(({ theme }) => ({
     backgroundColor: "#fff",
@@ -44,7 +45,7 @@ export const MovieInfoUI = () => {
             <Item>
               <div className="movie-info-section-trailer">
                 <iframe width="420" height="315"
-                src={`${baseUrl}$917496/videos/`}>
+                src={`${baseUrl}533535/videos/${KEY}`}>
                 </iframe>
               </div>
             </Item>

@@ -3,6 +3,7 @@ import MovieCard from "../share/sharedComponents/MovieCard";
 import { MovieSlider } from "../share/sharedComponents/MovieSlider";
 import { BaseMovie } from "../share/types";
 
+
 export const NowPlayingMoviesUI = () => {
   const movies = fetchNowPlayingMovies();
 

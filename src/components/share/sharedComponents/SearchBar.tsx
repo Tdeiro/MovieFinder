@@ -29,13 +29,15 @@ export const SearchBar = () => {
     <Stack className="search-bar" direction="row" spacing={5}>
       <h1>Movie Finder</h1>
       <Input onChange={onSearch} type="text" />
-      <Button variant="contained" onClick={handleSearch}>
+      <div className="search-bar-button">
+        <button onClick={handleSearch}>
         Search
-      </Button>
+      </button>
+      </div>
       {hasUser ? (
-        <Button variant="contained" onClick={handleLogOut}>
+        <button onClick={handleLogOut}>
           Log out
-        </Button>
+        </button>
       ) : null}
     </Stack>
   );

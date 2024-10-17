@@ -4,12 +4,13 @@ import MovieCard from "../share/sharedComponents/MovieCard";
 import { MovieSlider } from "../share/sharedComponents/MovieSlider";
 import { BaseMovie } from "../share/types";
 
+
 export const UpcomingMoviesUI = () => {
   const movies = fetchUpcomingMovies();
 
   return (
-    <div>
-      <MovieSlider name={"Upcoming Movies"}>
+    <div className="category-main-header">
+      <MovieSlider  name={"Upcoming Movies"}>
         {movies.length != 0 ? (
           movies.map((movie: BaseMovie) => (
             <MovieCard
