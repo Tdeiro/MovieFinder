@@ -2,9 +2,13 @@ import { Button, Input, Stack } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";
+import { signOut } from "firebase/auth";
+import { auth } from "../../../firebase/firebase";
+import { useAuthUser } from "../../../firebase/authUser";
 
-export const InputBar = () => {
+export const SearchBar = () => {
   const [search, setSearch] = useState("");
+  const hasUser = useAuthUser();
   const navigate = useNavigate();
 
   const onSearch = (e: any) => {
@@ -17,12 +21,22 @@ export const InputBar = () => {
     console.log(search);
   };
 
+  const handleLogOut = () => {
+    signOut(auth);
+  };
+
   return (
-    <Stack className="search-bar" direction="row" spacing={2}>
+    <Stack className="search-bar" direction="row" spacing={5}>
+      <h1>Movie Finder</h1>
       <Input onChange={onSearch} type="text" />
       <Button variant="contained" onClick={handleSearch}>
         Search
       </Button>
+      {hasUser ? (
+        <Button variant="contained" onClick={handleLogOut}>
+          Log out
+        </Button>
+      ) : null}
     </Stack>
   );
 };

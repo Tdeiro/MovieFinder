@@ -2,14 +2,16 @@ import { NowPlayingMoviesUI } from "../components/categories/NowPlayingUI";
 import { PopularMoviesUI } from "../components/categories/PopularMoviesUI";
 import { TopRatedMoviesUI } from "../components/categories/TopRatedMoviesUI";
 import { UpcomingMoviesUI } from "../components/categories/UpcomingMoviesUI";
-import { InputBar } from "../components/share/sharedComponents/SearchBar";
+
 import "./MainPage.css";
+import { useAuthUser } from "../firebase/authUser";
 
 export const MainPage = () => {
+  const currentUser = useAuthUser();
+
   return (
     <>
-      <h1>Movie Finder</h1>
-      <InputBar />
+      {currentUser ? currentUser.email : null}
       <PopularMoviesUI />
       <UpcomingMoviesUI />
       <TopRatedMoviesUI />

@@ -1,16 +1,15 @@
 import { MovieInfoUI } from "./components/categories/MovieInfoUI";
 import { MovieSearchResultUI } from "./components/categories/MovieSearchResultUI";
-import { InputBar } from "./components/share/sharedComponents/SearchBar";
+import { SearchBar } from "./components/share/sharedComponents/SearchBar";
 import { LoginPage } from "./pages/LoginPage";
 import { MainPage } from "./pages/MainPage";
 import { RegisterPage } from "./pages/RegisterPage";
 import { createBrowserRouter, Route, Routes } from "react-router-dom";
 
 const App = () => {
-  const movieId = "123";
-
   return (
     <>
+      <SearchBar></SearchBar>
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/login" element={<LoginPage />} />
