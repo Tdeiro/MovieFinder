@@ -1,0 +1,41 @@
+/* Container for the cast list */
+.cast-list {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 10px;
+    margin-top: 20px;
+    scroll-snap-type: x mandatory;
+  }
+  
+  .cast-list::-webkit-scrollbar {
+    display:-moz-groupbox;
+  }
+  
+  .cast-member {
+    flex: 0 0 auto;
+    width: 200px;
+    text-align: center;
+    scroll-snap-align: start;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+  }
+  
+  .cast-member img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .cast-member h2 {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+  
+  .cast-member p {
+    font-size: 14px;
+    color: #555;
+  }
+  

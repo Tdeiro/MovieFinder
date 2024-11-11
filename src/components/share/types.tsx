@@ -5,6 +5,7 @@ export type BaseMovie = {
   id?: number | undefined;
   overview?: string;
   movieId?: number;
+  key?: string;
 };
 
 export type MovieCardType = {

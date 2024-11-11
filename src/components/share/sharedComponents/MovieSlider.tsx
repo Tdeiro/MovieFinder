@@ -44,7 +44,7 @@ export const MovieSlider = (props: any) => {
     <div className="category-main" style={{ marginTop: "50px" }}>
       <h2>{props.name}</h2>
       <div style={{ display: "inline-flex", width: "100%", justifyContent: "center" }}>
-        <div style={{ maxWidth: "80%" }}>
+        <div className= "testing-main-btn" style={{ maxWidth: "80%" }}>
           <Slider {...settings}>{props.children}</Slider>
         </div>
       </div>
