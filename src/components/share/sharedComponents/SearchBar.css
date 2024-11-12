@@ -5,12 +5,13 @@
   padding: 10px 20px;
   color: antiquewhite;
   font-family: 'Montserrat', sans-serif;
-  background: linear-gradient(to right, #6A0DAD, #FF1493);
   border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(to right, #6A0DAD, #FF1493);
   height: 60px;
   transition: height 0.3s ease; 
 }
+
+
 h1 {
   cursor: pointer;
 }
@@ -27,7 +28,6 @@ h1:hover {
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
 }
 
 .search-bar-button button:hover,

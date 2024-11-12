@@ -31,39 +31,52 @@ export const MovieInfoUI = () => {
 
   return (
     <div className="movie-info-section">
-      <Box sx={{ width: "80%" }}>
-        <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid size={12}>
-            <Item>{movieInfo.title}</Item>
+      <Box sx={{ width: "80%", margin: "0 auto", padding: 2 }}>
+        <Grid container spacing={2}>
+          <Grid item size={18}>
+            <Item className="movie-info-section-title">
+              <h2 style={{ color: "#363b4e", fontSize: "1.5rem", marginBottom: "8px" }}>{movieInfo.title}</h2>
+              </Item>
           </Grid>
-          <Grid size={3}>
+          <Grid size={4}>
             <Item>
-              <div className="movie-info-section-image">
-                <img
-                  style={{ maxWidth: "100%" }}
-                  src={`https://image.tmdb.org/t/p/original${movieInfo.backdrop_path}`}
-                />
+              <img
+                style={{
+                  width: "100%",
+                  maxHeight: "300px",
+                  borderRadius: "10px",
+                }}
+                src={`https://image.tmdb.org/t/p/original${movieInfo.backdrop_path}`}
+              />
+            </Item>
+          </Grid>
+          <Grid size={8}>
+            <Item>
+              <MovieTrailer movieId={movieId} apiKey={apiKey} />
+            </Item>
+          </Grid>
+          <Grid size={4}>
+            <Item
+              sx={{
+                padding: 3,
+                backgroundColor: "#f3f4f6",
+                borderRadius: "10px",
+                boxShadow: "0px 4px 12px rgba(0, 0, 0, 0.1)",
+                marginTop: "-150px",
+                borderLeft: "5px solid #6A0DAD",
+                color: "#333",
+                textAlign: "justify",
+              }}
+            >
+              <div style={{ lineHeight: 1.6 }}>
+                <h3 style={{ color: "#363b4e", fontSize: "1.5rem", marginBottom: "8px" }}>Overview</h3>
+                <p style={{ fontSize: "1rem", fontWeight: "400" }}>{movieInfo.overview}</p>
               </div>
             </Item>
           </Grid>
-          <Grid size={6}>
+          <Grid size={8}>
             <Item>
-              <div className="movie-info-section-trailer">
-              <MovieTrailer movieId={movieId} apiKey={apiKey}/>
-              </div>
-            </Item>
-          </Grid>
-          <Grid size={6}>
-            <Item>
-              <div className="movie-info-section-description">
-              {movieInfo.overview}
-              {/* Want to add info.genres */}
-              </div>
-            </Item>
-          </Grid>
-          <Grid size={6}>
-            <Item>
-            <MovieCast movieId={movieId} apiKey={apiKey}/>
+              <MovieCast movieId={movieId} apiKey={apiKey} />
             </Item>
           </Grid>
         </Grid>

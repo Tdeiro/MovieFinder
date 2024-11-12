@@ -3,6 +3,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "../sharedComponents/MovieSlider.css";
 
+
 export const MovieSlider = (props: any) => {
   var settings = {
     dots: true,

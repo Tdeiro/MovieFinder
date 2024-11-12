@@ -10,7 +10,7 @@ export const UpcomingMoviesUI = () => {
 
   return (
     <div className="category-main-header">
-      <MovieSlider  name={"Upcoming Movies"}>
+      <MovieSlider  name={"Upcoming"}>
         {movies.length != 0 ? (
           movies.map((movie: BaseMovie) => (
             <MovieCard

@@ -27,7 +27,7 @@ const MovieTrailer = ({ movieId, apiKey }) => {
             {trailerKey && (
                 <iframe
                     width="100%"
-                    height="315"
+                    height="415"
                     src={`https://www.youtube.com/embed/${trailerKey}`}
                     title="Movie Trailer"
                     frameBorder="0"
