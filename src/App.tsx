@@ -4,8 +4,9 @@ import { SearchBar } from "./components/share/sharedComponents/SearchBar";
 import { LoginPage } from "./pages/LoginPage";
 import { MainPage } from "./pages/MainPage";
 import { RegisterPage } from "./pages/RegisterPage";
-import { createBrowserRouter, Route, Routes } from "react-router-dom";
+import {Route, Routes } from "react-router-dom";
 import { UserWatchlist } from "./pages/UserWatchlist";
+import "./global.css";
 
 const App = () => {
   return (

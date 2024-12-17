@@ -1,4 +1,4 @@
-import { Button, Input, Stack } from "@mui/material";
+import { Input, Stack } from "@mui/material";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./SearchBar.css";

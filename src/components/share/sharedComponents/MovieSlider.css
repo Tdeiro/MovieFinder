@@ -1,5 +1,5 @@
 .your-class::before {
-    color: white;   
+    color:var(--white-100); 
 }
 
 .category-main {
@@ -7,7 +7,7 @@
     
 }
 .category-main h2 {
-    color: antiquewhite;
+    color: var(--white-900);
     border-radius: 4px;
     box-shadow: 
     0 6px 6px rgba(0, 0, 0, 0.2), 

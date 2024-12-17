@@ -9,7 +9,7 @@ export const RegisterPage = () => {
   const [name, setName] = useState("");
 
   const [password, setPassword] = useState("");
-  const [passwordConfirm, setPasswordConfirm] = useState("");
+  // const [passwordConfirm, setPasswordConfirm] = useState("");
 
   const handleNewAccount = (e: any) => {
     e.preventDefault();

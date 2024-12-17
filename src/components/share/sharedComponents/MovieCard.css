@@ -1,22 +1,22 @@
 .movie-title {
-    color: #2E2E2E;
-    background-color: #ffffff; 
-    padding: 5px;
-    border-radius: 4px;
+    color: var(--black-100);
+    background-color: var(--white-100);
+    padding: 0.310rem;
+    border-radius: 0.25rem;
     text-decoration: none;
     transition: background-color 0.3s, color 0.3s;
 }
 
 .movie-title:hover {
-    background-color: #1A1A2E;
-    color: #ffffff; 
+    background-color: var(--purple-900);
+    color: var(--white-100);
     cursor: pointer;
 }
 
 .card-button {
-    color:#1A1A2E;
+    color:var(--purple-900)
 }
 
 .card-button:hover {
-    color:#1A1A2E;
+    color:var(--purple-900)
 }

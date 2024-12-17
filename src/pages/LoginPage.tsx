@@ -13,7 +13,7 @@ export const LoginPage = () => {
   const handleLogin = async (e: any) => {
     e.preventDefault();
     await signInWithEmailAndPassword(auth, email, password)
-      .then((userCredentials) => {
+      .then(() => {
         navigate("/");
       })
       .catch((error) => {

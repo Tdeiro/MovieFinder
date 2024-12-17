@@ -1,16 +1,15 @@
 .image-container {
     text-align: center;
     margin: auto;
-    width: 500px;
+    width: 31.25rem;
     
 }
 .main-container{
-    margin-top: 20px;
-    border:1px solid black;
-    height: 300px;
-    border-radius: 12px;
-    padding: 14px 18px;
-    
+    margin-top: 1.25rem;
+    border: 0.060rem solid black;
+    height: 18.75rem;
+    border-radius: 0.75rem;
+    padding: 0.875rem 1.125rem;
     
 }
 
@@ -19,23 +18,23 @@
 }
 
 .create-account-button{
-    margin-top: 100px;
+    margin-top: 6.25rem;
     
 }
 .div-username{
-    margin-top: 15px;
+    margin-top: 0.935rem;
 }
 .div-email{
-    margin-top: 15px;
+    margin-top: 0.935rem;
 }
 
 .div-password{
-    margin-top: 15px;
+    margin-top: 0.935rem;
 }
 .div-password-confirm{
-    margin-top: 15px;
+    margin-top: 0.935rem;
 }
 .confirm-button{
-    margin-top: 50px;
+    margin-top: 0.935rem;
 
 }

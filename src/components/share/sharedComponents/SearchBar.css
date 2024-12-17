@@ -1,13 +1,13 @@
 .search-bar {
   display: flex;
   align-items: center;
-  gap: 20px;
-  padding: 10px 20px;
-  color: antiquewhite;
+  gap: 1.25rem;
+  padding: 0.625rem 1.25rem;
+  color: var(--white-900);
   font-family: 'Montserrat', sans-serif;
-  border-radius: 8px;
+  border-radius: 0.rem;
   background: linear-gradient(to right, #6A0DAD, #FF1493);
-  height: 60px;
+  height: 3.75rem;
   transition: height 0.3s ease; 
 }
 
@@ -16,23 +16,23 @@ h1 {
   cursor: pointer;
 }
 h1:hover {
-  color: #FFE4E1;
+  color: var(--white-300);
 }
 
 
 .search-bar-button button,
 .auth-button {
-  padding: 8px 16px;
-  background-color: #f5f5f5;
-  color: #1A1A2E;
+  padding: 0.5rem 1rem;
+  background-color:var(--white-300);
+  color: var(--purple-900);
   border: none;
-  border-radius: 4px;
+  border-radius: 0.25rem;
   cursor: pointer;
 }
 
 .search-bar-button button:hover,
 .auth-button:hover {
-  background-color: #FFE4E1;
+  background-color: var(--white-300);
 }
 
 .user-profile {
@@ -48,20 +48,20 @@ h1:hover {
   width: 100%;
   height: auto;
   color: aliceblue;
-  max-width: 40px; 
+  max-width: 2.5rem; 
   transition: width 0.3s ease;
 }
 
 .user-profile svg:hover{
-  color: #FFE4E1;
+  color: var(--white-300);
 }
 
 @media (max-width: 768px) {
   .search-input {
-    width: 150px; 
+    width: 9.375rem;
   }
   
   .user-profile svg {
-    max-width: 30px; 
+    max-width: 1.875rem;
   }
 }
